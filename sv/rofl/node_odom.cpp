@@ -470,7 +470,7 @@ void NodeOdom::Publish(const std_msgs::Header& lidar_header) {
   pubs_.pub_pose.publish(posest_msg);
 
   // Odom message
-  nv::Odometry odom_msg;
+  nm::Odometry odom_msg;
   odom_msg.header = odom_header;
   Sophus2Ros(tf_o_l, odom_msg.pose.pose);
   pubs_.pub_odom.publish(odom_msg);
